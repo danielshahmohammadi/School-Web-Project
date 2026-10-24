@@ -1,0 +1,12 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.idea/
+.vscode/
+*.sqlite3/
+staticfiles/
+settings.py
+
+shopback/vshop/db.sqlite3
