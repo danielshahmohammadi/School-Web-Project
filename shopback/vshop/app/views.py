@@ -2,12 +2,46 @@ from django.shortcuts import render
 
 # 1
 def home(request):
-    return render(request,'pages/index.html')
+    menu =[
+    {
+        "title":"home",
+        "url":"http://127.0.0.1:8000/",
+    },
+    {
+        "title":"login",
+        "url":"http://127.0.0.1:8000/login",
+    },
+    {
+        "title":"product_list",
+        "url":"http://127.0.0.1:8000/product_list/",
+    },
+    {
+        "title":"supermarket",
+        "url":"http://127.0.0.1:8000/supermarket",
+    },
+    {
+        "title":"checkout",
+        "url":"http://127.0.0.1:8000/checkout",
+    },
+    {
+        "title":"categories",
+        "url":"http://127.0.0.1:8000/categories",
+    },
+    {
+        "title":"user",
+        "url":"http://127.0.0.1:8000/user",
+    },
+    ]
+
+
+
+
+    return render(request,'pages/index.html',{"menu":menu})
 
 # 2
 def about(request):
     return render (request,"'pages/about.html")
-# درباره ما 
+# درباره ما
 
 # 3
 def product_list(request):
@@ -30,8 +64,37 @@ def login(request):
 # ورود کاربر
 
 # 7
-def profile(request): 
-    return render (request,"pages/profile.html")
+def profile(request):
+    prof = [
+            {
+                "title":"orders",
+                "url":"http://127.0.0.1:8000/orders",
+            },
+            {
+                "title":"comments",
+                "url":"http://127.0.0.1:8000/comments",
+            },
+            {
+                "title":"favorites",
+                "url":"http://127.0.0.1:8000/favorites/",
+            },
+            {
+                "title":"addresses",
+                "url":"http://127.0.0.1:8000/addresses",
+            },
+            {
+                "title":"user",
+                "url":"http://127.0.0.1:8000/user",
+            },
+            {
+                "title":"logout",
+                "url":"http://127.0.0.1:8000/logout",
+            },
+
+    ]
+
+
+    return render (request,"pages/profile.html",{"menu":prof})
 # پس از ورود کاربر
 
 # 8
@@ -61,7 +124,39 @@ def checkout(request):
 
 # 13
 def categories (request):
-    return render (request ,"pages/categories.html")
+
+    cates =[
+        {
+            "title":"digital",
+            "url":"http://127.0.0.1:8000/digital",
+        },
+        {
+            "title":"art_culture",
+            "url":"http://127.0.0.1:8000/art_culture",
+        },
+        {
+            "title":"fashion",
+            "url":"http://127.0.0.1:8000/fashion/",
+        },
+        # {
+        #     "title":"supermarket",
+        #     "url":"http://127.0.0.1:8000/supermarket",
+        # },
+        # {
+        #     "title":"checkout",
+        #     "url":"http://127.0.0.1:8000/checkout",
+        # },
+        # {
+        #     "title":"categories",
+        #     "url":"http://127.0.0.1:8000/categories",
+        # },
+        # {
+        #     "title":"user",
+        #     "url":"http://127.0.0.1:8000/user",
+        # },
+        ]
+
+    return render (request ,"pages/categories.html",{"menu":cates})
 # کتگوری ها
 
 # 14
