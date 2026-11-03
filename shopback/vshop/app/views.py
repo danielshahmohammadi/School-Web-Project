@@ -4,31 +4,27 @@ from django.shortcuts import render
 def home(request):
     menu =[
     {
-        "title":"home",
-        "url":"http://127.0.0.1:8000/",
-    },
-    {
-        "title":"login",
+        "title":"ثبت نام",
         "url":"http://127.0.0.1:8000/login",
     },
     {
-        "title":"product_list",
+        "title":"لیست محصولات",
         "url":"http://127.0.0.1:8000/product_list/",
     },
     {
-        "title":"supermarket",
+        "title":"سوپرمارکت",
         "url":"http://127.0.0.1:8000/supermarket",
     },
     {
-        "title":"checkout",
+        "title":"سبد خرید",
         "url":"http://127.0.0.1:8000/checkout",
     },
     {
-        "title":"categories",
+        "title":"دسته بندی ها",
         "url":"http://127.0.0.1:8000/categories",
     },
     {
-        "title":"user",
+        "title":"   پروفایل",
         "url":"http://127.0.0.1:8000/user",
     },
     ]
@@ -67,27 +63,27 @@ def login(request):
 def profile(request):
     prof = [
             {
-                "title":"orders",
+                "title":"سفارشات",
                 "url":"http://127.0.0.1:8000/orders",
             },
             {
-                "title":"comments",
+                "title":"کامنت ها",
                 "url":"http://127.0.0.1:8000/comments",
             },
             {
-                "title":"favorites",
+                "title":"علاقه مندی ها",
                 "url":"http://127.0.0.1:8000/favorites/",
             },
             {
-                "title":"addresses",
+                "title":"آدرس های من",
                 "url":"http://127.0.0.1:8000/addresses",
             },
             {
-                "title":"user",
+                "title":"پنل کاربری",
                 "url":"http://127.0.0.1:8000/user",
             },
             {
-                "title":"logout",
+                "title":"خروج از حساب کاربری",
                 "url":"http://127.0.0.1:8000/logout",
             },
 
@@ -127,15 +123,15 @@ def categories (request):
 
     cates =[
         {
-            "title":"digital",
+            "title":"محصولات دیجیتال",
             "url":"http://127.0.0.1:8000/digital",
         },
         {
-            "title":"art_culture",
+            "title":"فرهنگی و هنری",
             "url":"http://127.0.0.1:8000/art_culture",
         },
         {
-            "title":"fashion",
+            "title":"پوشاک و مد",
             "url":"http://127.0.0.1:8000/fashion/",
         },
         # {
