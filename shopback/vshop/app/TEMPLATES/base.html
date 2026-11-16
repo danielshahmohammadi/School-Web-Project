@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static './css/w3.css' %}"
+</head>
+<body>
+    
+<header>
+
+    <div class="w3-bar w3-border w3-light-grey">
+        <a href="http://127.0.0.1:8000/" class="w3-bar-item w3-button w3-green">خانه</a>
+        <a href="http://127.0.0.1:8000/categories" class="w3-bar-item w3-button">دسته بندی</a>
+        <a href="http://127.0.0.1:8000/about" class="w3-bar-item w3-button">درباره ما</a>
+        <a href="http://127.0.0.1:8000/login" class="w3-bar-item w3-button">ثبت نام</a>
+        <a href="http://127.0.0.1:8000/checkout" class="w3-bar-item w3-button">سبد خرید</a>
+    </div>
+
+
+</header>
+
+
+<main>
+
+{% block content %}
+{% endblock %}
+
+</main>
+
+
+<footer>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,13 +1,14 @@
 from django.shortcuts import render
-
+from .db import menu
 # 1
 def home(request):
-    return render(request,'pages/index.html')
+    
+    return render(request,'pages/index.html',{"menu":menu})
 
 # 2
 def about(request):
     return render (request,"'pages/about.html")
-# درباره ما 
+# درباره ما
 
 # 3
 def product_list(request):
@@ -30,8 +31,37 @@ def login(request):
 # ورود کاربر
 
 # 7
-def profile(request): 
-    return render (request,"pages/profile.html")
+def profile(request):
+    prof = [
+            {
+                "title":"سفارشات",
+                "url":"http://127.0.0.1:8000/orders",
+            },
+            {
+                "title":"کامنت ها",
+                "url":"http://127.0.0.1:8000/comments",
+            },
+            {
+                "title":"علاقه مندی ها",
+                "url":"http://127.0.0.1:8000/favorites/",
+            },
+            {
+                "title":"آدرس های من",
+                "url":"http://127.0.0.1:8000/addresses",
+            },
+            {
+                "title":"پنل کاربری",
+                "url":"http://127.0.0.1:8000/user",
+            },
+            {
+                "title":"خروج از حساب کاربری",
+                "url":"http://127.0.0.1:8000/logout",
+            },
+
+    ]
+
+
+    return render (request,"pages/profile.html",{"menu":prof})
 # پس از ورود کاربر
 
 # 8
@@ -61,7 +91,39 @@ def checkout(request):
 
 # 13
 def categories (request):
-    return render (request ,"pages/categories.html")
+
+    cates =[
+        {
+            "title":"محصولات دیجیتال",
+            "url":"http://127.0.0.1:8000/digital",
+        },
+        {
+            "title":"فرهنگی و هنری",
+            "url":"http://127.0.0.1:8000/art_culture",
+        },
+        {
+            "title":"پوشاک و مد",
+            "url":"http://127.0.0.1:8000/fashion/",
+        },
+        # {
+        #     "title":"supermarket",
+        #     "url":"http://127.0.0.1:8000/supermarket",
+        # },
+        # {
+        #     "title":"checkout",
+        #     "url":"http://127.0.0.1:8000/checkout",
+        # },
+        # {
+        #     "title":"categories",
+        #     "url":"http://127.0.0.1:8000/categories",
+        # },
+        # {
+        #     "title":"user",
+        #     "url":"http://127.0.0.1:8000/user",
+        # },
+        ]
+
+    return render (request ,"pages/categories.html",{"menu":cates})
 # کتگوری ها
 
 # 14
